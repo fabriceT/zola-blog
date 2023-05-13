@@ -1,0 +1,20 @@
+<!-- should be in templates/ -->
+<html>
+<head>
+<style>
+    div.mermaid {
+	width:25%;
+    }
+</style>
+</head>
+<body>
+
+<h1>{{page.title}}</h1>
+{{page.content  | safe }}
+  <!-- when this javascript is loaded and initialized it will look for divs with the class mermaid.
+it will replace the content of those divs with the generated svg -->
+<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({startOnLoad:true});</script>
+</body>
+
+</html>
