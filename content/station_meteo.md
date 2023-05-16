@@ -10,7 +10,7 @@ taxonomies:
     - électronique
 ---
 
-Après avoir acheté un appareil connecté bon marché, je me suis rendu compte qu'il contenait un ESP8266. Voulant m'amuser avec, j'ai sorti un peu d'électronique des cartons pour m'amuser avec la lampe. En fait, je n'ai jamais touché la lampe et me suis amusé sur ma carte d'expérimentation ESP-12. 
+Après avoir acheté un appareil connecté bon marché, je me suis rendu compte qu'il contenait un ESP8266. Voulant m'amuser avec, j'ai sorti un peu d'électronique des cartons pour m'amuser avec la lampe. En fait, je n'ai jamais touché la lampe et me suis amusé sur ma carte d'expérimentation ESP-12.
 
 En recherchant une mise à jour du firmware, je suis tombé sur [ESP Easy](https://espeasy.readthedocs.io/en/latest/) qui permet de faire facilement de l'IOT. Le projet s'est donc orienté en fonction de ce que j'avais sous la main : des capteurs environnementaux. Vive la future station météo complète connectée en Wifi.
 

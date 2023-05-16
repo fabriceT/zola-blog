@@ -33,19 +33,19 @@ Nous allons voir qu'il est possible d'éviter ce genre d'arnaque avec de la form
 
 Le problème de validation de l'identité d'une personne et, par extension, l'identification de l’origine de la source d’un message est un problème très ancien. On a inventé les sceaux, la signature, les mots de passes… pour tenter de résoudre ce problème. Cependant, chaque solution comporte des faiblesses pouvant être exploitées par des personnes plus ou moins motivées à usurper une identité ou falsifier une source.
 
-La première solution, la plus rudimentaire et la plus fiable est l'authentification de proximité : la personne est physiquement en face de nous et on compare avec les informations dont on dispose sur elle. Le seul moyen de contourner cette validation était de trouver un sosie convenable, suffisamment bon acteur et imitateur pour interpréter correctement l'individu à personnifier. Le contournement de ce type d’authentification peut s'avérer être difficile selon la proximité des intervenants. 
+La première solution, la plus rudimentaire et la plus fiable est l'authentification de proximité : la personne est physiquement en face de nous et on compare avec les informations dont on dispose sur elle. Le seul moyen de contourner cette validation était de trouver un sosie convenable, suffisamment bon acteur et imitateur pour interpréter correctement l'individu à personnifier. Le contournement de ce type d’authentification peut s'avérer être difficile selon la proximité des intervenants.
 
 Le principal problème de ce type d’authentification est qu’on ne peut pas toujours avoir la personne en face de soi. On utilisait à alors des mesures destinées à identifier la source : signature, adresse, écriture… Puis la technologie est venue pour s'interfacer dans ce type d'échanges, apportant des différences majeures tout en donnant l'impression que rien avait changé.
 
 L'arnaque de type faux « le Drian » reposait sur le fait que le contact visuel et audio était réalisé à distance avec une connexion de mauvaise qualité afin qu'Alice se persuade que pixel Bob était le fruit de la qualité de la transmission. Cliff utilisait cette ruse pour atténuer les défauts de son postiche. Il fallait également qu’Alice ne puisse pas remettre en question la situation. Pour cela, Cliff était rusé et avait du bagou.
 
-Vous pouvez dire qu'Alice n'était pas dans un bon jour et qu'elle aurait dû flairer le piège, qu'une bonne transmission pour une visioconférence aurait permis une authentification de proximité. Détrompez-vous, inconscients que vous êtes ! Le [deepfake permet d'imiter l'apparence visuelle d'une personne à travers le prisme des technologies](https://www.youtube.com/watch?v=wq-kmFCrF5Q). 
+Vous pouvez dire qu'Alice n'était pas dans un bon jour et qu'elle aurait dû flairer le piège, qu'une bonne transmission pour une visioconférence aurait permis une authentification de proximité. Détrompez-vous, inconscients que vous êtes ! Le [deepfake permet d'imiter l'apparence visuelle d'une personne à travers le prisme des technologies](https://www.youtube.com/watch?v=wq-kmFCrF5Q).
 
 Il ne faut pas forcément faire confiance à une personne parce qu'on la voit où l'entend, car votre perception de l’information passe par des technologies qui peuvent altérer ce que vous voyez ou entendez.
 
-## Retour vers le passé. 
+## Retour vers le passé.
 
-La sécurité des communications a concerné les militaires depuis bien longtemps. À l’époque de Jules César, les militaires romains utilisaient un chiffrement par décalage de lettre pour rendre les messages illisibles, à l'époque.  
+La sécurité des communications a concerné les militaires depuis bien longtemps. À l’époque de Jules César, les militaires romains utilisaient un chiffrement par décalage de lettre pour rendre les messages illisibles, à l'époque.
 
 Un tournant dans la communication sécurisée a été franchi après la seconde guerre mondiale suite au cassage du code [d'Enigma](https://fr.wikipedia.org/wiki/Enigma_(machine)), une solution cryptographique allemande de la seconde guerre mondiale. Elle devait permettre aux Allemands de se coordonner sans « divulgacher » de détails sur leurs plans puisque l'information étant protégée par un moyen cryptographique.
 
@@ -65,7 +65,7 @@ Sa disponibilité n'était pas importante, il s'agissait ici de la responsabilit
 
 Quant à sa non-répudiation, n'importe quel opérateur ayant accès à un outil de chiffrement et à la clef en usage pouvait envoyer sa liste de courses comme ordre de manœuvre. Il était encore de la responsabilité de la chaîne de commandement de s'assurer que les messages sortants avaient une origine correcte.
 
-On était en présence d'un circuit dans lequel les informations étaient protégées et, reposant en partie sur cette protection, les sources étaient validées. 
+On était en présence d'un circuit dans lequel les informations étaient protégées et, reposant en partie sur cette protection, les sources étaient validées.
 
 Puis, par ignorance, méconnaissance ou toute autre raison (du genre « on a rien à craindre », « on est les meilleurs », « trop compliqué de suivre les recommandations, on va faire comme on a toujours fait »… choisissez), des erreurs ont été commises dans l'utilisation de l'outil, ce qui a laissé la possibilité d’exploiter des failles. La protection ayant été cassée. Ce qui était à l'origine un échange sécurisé s’est transformé en un échange de cartes postales. Quant aux Allemands, ils avaient la certitude que personne d’autre ne pouvait lire ce qui était écrit sur leurs cartes postales.
 
@@ -119,7 +119,7 @@ De même, il en est de la responsabilité des utilisateurs finaux de s'assurer q
 
 ### La non-répudiation
 
-La cryptographie asymétrique permet, si la clef privée est protégée, doit garantir que l'expéditeur est bien à l'origine de l'information et qu'il n'y a pas eu d'altération. 
+La cryptographie asymétrique permet, si la clef privée est protégée, doit garantir que l'expéditeur est bien à l'origine de l'information et qu'il n'y a pas eu d'altération.
 
 Certaines solutions de chiffrement asymétrique n'offrent malheureusement pas la possibilité de vérifier qui a chiffré : [age](https://github.com/FiloSottile/age) par exemple. Alors que d'autre le font : [kryptor](https://www.kryptor.co.uk/)
 

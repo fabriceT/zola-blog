@@ -22,7 +22,7 @@ La configuration se réalise en deux parties :
 La configuration est présente dans les répertoires suivants :
 
 - `/etc/polkit-1/rules.d` et `/usr/share/polkit-1/rules.d` pour les règles locales ou les changements réalisés sur les règles installées avec la distribution.
-- `/usr/share/polkit-1/actions` pour les actions distribuées avec les paquets de la distribution. 
+- `/usr/share/polkit-1/actions` pour les actions distribuées avec les paquets de la distribution.
 
 Toute modification apportée dans `/usr/share/polkit-1/` pourra être écrasée par une mise à jour d'un paquet de la distribution.
 
@@ -166,11 +166,11 @@ Attention : un code complexe peut faire planter polkit. :/
         var unit = action.lookup("unit");
 
         // J'aime pas les multiconditions qui n'en finissent pas.
-        isVerbAllowed = (verb == "start" || 
-                         verb == "stop" || 
-                         verb == "restart" || 
+        isVerbAllowed = (verb == "start" ||
+                         verb == "stop" ||
+                         verb == "restart" ||
                          verb == "reload");
-                        
+
         isUnitAllowed = (unit == "lighttpd.service" ||
                          unit == "usbguard.service");
 
@@ -200,7 +200,7 @@ Affiche les informations d'une action en particulier.
     message:           Saving secret configuration requires authorization
     vendor:            Libvirt Project
     vendor_url:        https://libvirt.org
-    icon:              
+    icon:
     implicit any:      no
     implicit inactive: no
     implicit active:   no

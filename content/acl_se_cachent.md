@@ -19,7 +19,7 @@ Bien plus tard, je retouche la configuration de samba pour serrer un tour de vis
 
 Encore plus tard, une autre demande impliquant des ACL rentre dans le jeu. Cette fois-ci, il faut limiter l’accès en écriture à la majorité d’un service sur un répertoire dans le partage qui lui est dédié.*OK, faites ce que vous voulez chez vous, on est pas là pour vous apprendre à travailler*. Un collègue reprend ce que j’ai fait sur les ACL de la TAZ sauf que cela ne fonctionne plus. Bordel de manchot ! Une mise à jour a mis le dawa ?! Pourtant, tout semble OK dans la configuration. Le répertoire du CSE n’étant plus touché depuis un an, il se peut que personne ne s’est rendu compte de la supercherie.
 
-On a cherché, bien cherché. Puis, je me suis rappeler de la sécurisation sur la TAZ et que − foutre Dieu ! − les membres du groupe administrateur du partage se contrefichent des ACL. On a donc cherché à résoudre un problème qui n’existait pas. J’hésite depuis à mettre des alias : 
+On a cherché, bien cherché. Puis, je me suis rappeler de la sécurisation sur la TAZ et que − foutre Dieu ! − les membres du groupe administrateur du partage se contrefichent des ACL. On a donc cherché à résoudre un problème qui n’existait pas. J’hésite depuis à mettre des alias :
 
-* `setfacl` = `setfuckingacl` 
+* `setfacl` = `setfuckingacl`
 * `getfacl` = `getfuckingacl`.

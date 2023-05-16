@@ -15,7 +15,7 @@ taxonomies:
 
 La méthode « classique » était de créer une machine virtuelle, de créer des partages et de consommer du CPU. Les conteneurs sont une solution beaucoup plus légère, de plus distrobox monte des partages sur le conteneur afin retrouver votre environnement connu : vos fichiers seront accessibles, et vous aurez l'impression d'être sur la machine hôte.
 
-Des exemples d'utilisation : 
+Des exemples d'utilisation :
 - Vous ne voulez ou ne pouvez  pas installer un programme sur votre distribution : nouveau conteneur de la distribution de choix, installation du programme sur celle-ci et hop…
 - Vous utilisez Archlinux (btw) et voulez continuer à manipuler une autre distribution parce que c'est ce qu'il y a sur vos serveurs (Almalinux, Centos).
 - Vous devez utiliser plusieurs versions d'un même programme.
@@ -48,7 +48,7 @@ Il est également possible d'« exporter » une application. L'export consiste �
 
 De retour sur notre distribution :
 
-    arch$ cat ~/.local/share/applications/lapine-gnumeric.desktop 
+    arch$ cat ~/.local/share/applications/lapine-gnumeric.desktop
     [Desktop Entry]
     Version=1.0
     Name=Gnumeric  (on lapine)

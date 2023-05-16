@@ -13,9 +13,9 @@ taxonomies:
 
 Age prend en charge le chiffrement symétrique et asymétrique. Par contre, il n'y a pas de possibilité de signer un document.
 
-La création d'un couple de clef privée et publique et simple (ajoutez `-o key.asc` pour écrire dans un fichier `key.asc`.): 
+La création d'un couple de clef privée et publique et simple (ajoutez `-o key.asc` pour écrire dans un fichier `key.asc`.):
 
-    $ age-keygen 
+    $ age-keygen
     # created: 2023-02-03T09:16:01+01:00
     # public key: age1sq503wu8pr48t6yyuhdfcvkz6m0728nj8vx4yc8df9j3fuggsadsjhcmaq
     AGE-SECRET-KEY-1HX4RAVNH6JEXGZNW0NZNT4K3DG9GR2WGHDR867FMLZHW370FFQ2SQMCMF9
@@ -44,7 +44,7 @@ On indique les différents destinataires à l'aide de l'option `-r`. Il est poss
 
 Afin de faciliter les manipulations avec plusieurs destinataires, il est possible d'utiliser l'option `-R` qui va prendre un fichier des clefs des destinataires
 
-    $ cat recipients 
+    $ cat recipients
     age1ql3z7hjy54pw3hyww5ayyfg7zqgvc7w3j2elw8zmrj2kg5sfn9aqmcac8p
     ssh-rsa AAAAB3NzaC1yc2EAAAAD…qnNU4EeHWGz6ZKlhZkDp0t
     age1ctg0j84l4ar7aek6ln6352sc9gk5t2f35n3g4nkpmchharwxxdwqwj3lev
@@ -53,7 +53,7 @@ Afin de faciliter les manipulations avec plusieurs destinataires, il est possibl
 
 Chaque destinataire déchiffrera avec sa clef.
 
-    $ age -d -i ~/.age/keys.asc infile # Pour clef age 
+    $ age -d -i ~/.age/keys.asc infile # Pour clef age
 
     $ age -d -i ~/.ssh/id_rsa infile # Pour SSH
 

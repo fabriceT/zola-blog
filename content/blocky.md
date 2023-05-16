@@ -9,7 +9,7 @@ taxonomies:
     - système
 ---
 
-Certains utilisent [Pi-hole](https://pi-hole.net/) pour filtrer les requêtes DNS, d'autres utilisent [Blocky](https://0xerr0r.github.io/blocky/). 
+Certains utilisent [Pi-hole](https://pi-hole.net/) pour filtrer les requêtes DNS, d'autres utilisent [Blocky](https://0xerr0r.github.io/blocky/).
 
 Bien que moins connu, Blocky dispose, entre autres, de fonctionnalités fort sympathiques :
 
@@ -37,7 +37,7 @@ upstream:
     - https://security.cloudflare-dns.com/dns-query
     - https://dns.digitale-gesellschaft.ch/dns-query
 
-customDNS:  
+customDNS:
   customTTL: 1h
   rewrite:
     local: lan
@@ -76,7 +76,7 @@ blocking:
     # Appareil électroménager
     192.168.0.18/32:
       - malware
-      
+
 prometheus:
   enable: true
   path: /metrics

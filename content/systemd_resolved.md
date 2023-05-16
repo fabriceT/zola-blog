@@ -75,7 +75,7 @@ On peut également faire des recherches sur les entrées TXT
 
 Il est possible de lister les différents éléments à placer après l'option `-t` (type) ou `-c` (class) en y ajoutant `help`, par exemple `-t help`.
 
-### À la dig 
+### À la dig
 
 Pour afficher requête comme avec dig, il faut ruser. Cela va nous permettre de voir quelques fonctionnalités de resolvctl.
 
@@ -115,7 +115,7 @@ Si je devais utiliser la même requête avec resolvectl :
     free.fr IN NS freens1-g20.free.fr                           -- link: wlan0
     free.fr IN NS freens2-g20.free.fr                           -- link: wlan0
 
-Sauf que ça ne fonctionne pas toujours. En effet, parfois seule l'entrée `A` apparait. Alors comment fait-on ? Je ne donnerai pas la réponse, car les résultats ont varié et je n'ai pas trouvé de réponse :(. Dig ne donnant pas forcément non plus les mêmes résultats en utilisant le serveur par défaut. Je suspecte des mises en cache en local et sur mon réseau (192.168.0.134 est aussi un cache DNS). Les DNS sont simples, cependant ça fini toujours en bordel couvré. 
+Sauf que ça ne fonctionne pas toujours. En effet, parfois seule l'entrée `A` apparait. Alors comment fait-on ? Je ne donnerai pas la réponse, car les résultats ont varié et je n'ai pas trouvé de réponse :(. Dig ne donnant pas forcément non plus les mêmes résultats en utilisant le serveur par défaut. Je suspecte des mises en cache en local et sur mon réseau (192.168.0.134 est aussi un cache DNS). Les DNS sont simples, cependant ça fini toujours en bordel couvré.
 
 On va voir comment avancer là-dedans en configurant un autre serveur DNS pour une interface réseau.
 

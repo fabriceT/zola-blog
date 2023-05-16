@@ -41,7 +41,7 @@ N'oubliez pas qu'il faut que l'on puisse résoudre le nom DNS et que le port 80 
 
 Deuxième étape, on remplit normalement la demande de certificat Let's Encrypt dans le panneau de configuration du NAS (Security -> Certificate). Le challenge va réussir, m'enfin !
 
-La partie chafouine est de récupérer le certificat correspondant. Les certificats ainsi récupérés sont stockés dans le répertoire `/usr/syno/etc/certificate/_archive/`, suivi d'un nom de répertoire de 6 caractères qui semble est le résultat d'un hash. L'horodatage vous aiguillera sur le bon répertoire. 
+La partie chafouine est de récupérer le certificat correspondant. Les certificats ainsi récupérés sont stockés dans le répertoire `/usr/syno/etc/certificate/_archive/`, suivi d'un nom de répertoire de 6 caractères qui semble est le résultat d'un hash. L'horodatage vous aiguillera sur le bon répertoire.
 
 Note : J'espère le système utilise le nom du serveur pour générer le hash.
 
@@ -54,17 +54,17 @@ Il est temps de passer à la troisième étape, c'est-à-dire créer la configur
         server_name gitea.kill-swit.ch;
 
         allow all;
-        
+
         location ^~ /.well-known/acme-challenge {
             root /var/lib/letsencrypt;
             default_type text/plain;
         }
-            
+
         location / {
             return 301 https://$server_name/$request_uri;
         }
     }
-    
+
     server {
         listen 443;
         listen [::]:443;

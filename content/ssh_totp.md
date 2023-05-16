@@ -42,7 +42,7 @@ On configure le TOTP en lançant la commande : `google-authenticator`
 
     Do you want authentication tokens to be time-based (y/n) y
 
-Oui, on ne veut du TOTP (`TOTP_AUTH`). Dans le cas contraire, il s'agit de HOTP. 
+Oui, on ne veut du TOTP (`TOTP_AUTH`). Dans le cas contraire, il s'agit de HOTP.
 
 On scanne le QR code avec son téléphone portable et son application TOTP. Puis, on valide en saisissant le jeton affiché sur l'application.
 

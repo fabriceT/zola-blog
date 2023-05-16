@@ -12,7 +12,7 @@ extra:
 ![Castex](castex.jpg)
 
 ## Gouvernement Macron
-{% mermaiddiagram() %} 
+{% mermaiddiagram() %}
 ---
 title: Schéma des lois selon Macron
 ---
@@ -20,7 +20,7 @@ stateDiagram-v2
     s1: Opposition du peuple
     s2: Parlement d'accord
     s3: Allez vous faire foutre !
-    
+
     state if_state <<choice>>
     state if_state2 <<choice>>
     [*] --> Loi

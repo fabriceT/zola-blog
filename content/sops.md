@@ -40,7 +40,7 @@ On déchiffre
 
     sops -d outfile
 
-Notes importantes: 
+Notes importantes:
 
 * SOPS veut déchiffrer en utilisant la clef privée située à l'emplacement `$XDG_CONFIG_HOME/sops/age/keys.txt`. Il est possible de spécifier une autre clef en utilisant la variable d'environnement `SOPS_AGE_KEY_FILE`.
 * SOPS peut s'emmêler les pinceaux lors du déchiffrement. C'est parce qu'il doit « comprendre » le format de fichier qu'il a chiffré. Ces formats sont YAML, JSON, ENV, INI et BINARY. Il faut donc que le format soit indiqué par l'extension du fichier ou explicitement spécifié avec les options `--input-type` et `--output-type`.
@@ -60,7 +60,7 @@ Pour ma part, une commande lance `docker-compose` dans un environnement utilisat
 
     sops exec-env crypted.env "sudo -E docker-compose up -d"
 
-On peut redire sur le `sudo` et le fait que cela tourne en `root`, je n'ai pas testé de mettre la couche docker en rootless sur le Synology. 
+On peut redire sur le `sudo` et le fait que cela tourne en `root`, je n'ai pas testé de mettre la couche docker en rootless sur le Synology.
 
 Maintenant qu'il est possible de reconstruire le conteneur en utilisant des données chiffrées, il faut nous concentrer sur l'importance des données chiffrées puisque toutes n'ont pas toute la même importance. Le document chiffré peut contenir, par exemple, la version de l'image ou l'emplacement d'un volume. Il n'y a pas besoin de préserver la confidentialité pour une telle information. Souvenez-vous que SOPS comprend plusieurs formats de fichier ; Cela rend possible de chiffrer des informations au sein d'un fichier en ignorant d'autres. On sélectionne les sections à chiffrer, ou à exclure du chiffrement, avec les options `--(un)encrypted-suffix` et `--(un)encrypted-regex`.
 

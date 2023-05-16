@@ -12,7 +12,7 @@ taxonomies:
 ---
 En lisant [une documentation sur l'utilisation du coffre fort d'Ansible](https://www.unicoda.com/?p=4213), je suis tombé sur l'utilisation d'un script pour ouvrir automatiquement le coffre via un script shell. N'utilisant pas `pass` mais KeepassXC, je me suis demandé comment récupérer une valeur dans la base de données.
 
-KeepassXC fourni un utilitaire `keepassxc-cli` pour réaliser des opérations dans la base de données des mots de passe, ce n'est cependant pas ce que je vais utiliser pour le moment (voir le [billet associé](/keepassxc-cli/)). :p 
+KeepassXC fourni un utilitaire `keepassxc-cli` pour réaliser des opérations dans la base de données des mots de passe, ce n'est cependant pas ce que je vais utiliser pour le moment (voir le [billet associé](/keepassxc-cli/)). :p
 
 Mon bureau étant Gnome, un autre gestionnaire de mot de passe est déjà présent pour ce bureau : `gnome-keyring`. C'est lui qu'on va utiliser puisque le mot de passe ne sera jamais partagé entre d'autres machines.
 
@@ -25,8 +25,8 @@ Pour créer une entrée dans la base de données de gnome-keyring :
     secret-tool store --label='Ansible Vault Password' application ansible
     password:
 
-Pour afficher le mot de passe stocké : 
-  
+Pour afficher le mot de passe stocké :
+
     secret-tool lookup application ansible.
     XXXXXX
 
@@ -34,7 +34,7 @@ Mais pourquoi "application ansible" ?
 
 Le man indique que l'option `add` prend comme arguments `attribute value ...`, ce qui est obscur. On va creuser avec la fonction `search`.
 
-    secret-tool search --all application ansible                                                                                                   
+    secret-tool search --all application ansible
     [/org/freedesktop/secrets/collection/login/268]
     label = Ansible Vault
     secret = XXXXXXXX

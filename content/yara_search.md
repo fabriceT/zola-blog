@@ -14,7 +14,7 @@ YARA est un outil permettant de rechercher, et trouver, des occurrences permetta
 
 Ceux qui ont eu à gérer un serveur de fichiers dans une entreprise se sont vite rendu compte que cela pouvait partir en grand n’importe quoi. La zone permettant l’échange de fichiers entre service a très souvent tendance à partir en foire au gros n’importe quoi : données RH, données personnelles, mot de passe… Il faut avoir l’œil, car toutes les raisons sont bonnes pour faciliter l'échange entre personnes.
 
-RGPD étant un mot bien compliqué à écrire, nous allons ici faire la chasse aux données personnelles avec des règles YARA et ClamAV. Oui, il est possible des signatures virales personnelles avec ClamAV. En plus ce dernier va inspecter les archives et autres formats complexes. 
+RGPD étant un mot bien compliqué à écrire, nous allons ici faire la chasse aux données personnelles avec des règles YARA et ClamAV. Oui, il est possible des signatures virales personnelles avec ClamAV. En plus ce dernier va inspecter les archives et autres formats complexes.
 
 Partons à la chasse aux adresses mails et aux numéros de téléphones.
 
@@ -25,7 +25,7 @@ Avant de commencer, peut-être voulez-vous jeter un petit coup d'œil à la [doc
 ### L'adresse mail
 
 Généralement, elle consiste en `prenom.nom@fai.tld`. On va faire simple en détectant certains fournisseurs d'adresse mail pour particuliers. De toute façon, les adresses mails circulent souvent en troupeau. Détectez en une, vous aurez un emplacement de choix où d'autres données personnelles auront fait leur nid.
- 
+
     rule mail_perso
     {
         strings:
@@ -45,12 +45,12 @@ Généralement, elle consiste en `prenom.nom@fai.tld`. On va faire simple en dé
         condition:
             any of them
     }
-    
+
 On demande ici à ClamAV de trouver au moins une occurrence de chaînes de caractères dans celles à trouver, sans se soucier de la casse.
 
 ### Le numéro de téléphone
 
-C'est la plaie, les gens écrivent les numéros de téléphone d'une manière généralement arbitraire. On va donc rechercher : 
+C'est la plaie, les gens écrivent les numéros de téléphone d'une manière généralement arbitraire. On va donc rechercher :
 
 * Un ensemble de 5 groupes de 2 chiffres
 * Les groupes sont séparés par un caractère ou non
@@ -73,8 +73,8 @@ Ce n'est pas fiable, on ramasse un peu n'importe quoi. Cela permet tout de même
 On regroupe les 2 règles dans un fichier avec l'extension .yara, ou on utilise le mot clef `include`, puis on lance le scan
 
     clamscan -d privacy.yara -r -i tests/
-    Loading:     0s, ETA:   0s [========================>]        2/2 sigs    
-    Compiling:   0s, ETA:   0s [========================>]       40/40 tasks 
+    Loading:     0s, ETA:   0s [========================>]        2/2 sigs
+    Compiling:   0s, ETA:   0s [========================>]       40/40 tasks
 
     ./tests/test.docx: YARA.phone_privacy.UNOFFICIAL FOUND
     ./tests/test.xlsx: YARA.mail_privacy.UNOFFICIAL FOUND

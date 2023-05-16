@@ -73,7 +73,7 @@ Le timer - `/etc/systemd/system/goaccess.timer`
     [Install]
     WantedBy=timers.target
 
-On active le tout 
+On active le tout
 
     systemctl enable --now goaccess.timer
 

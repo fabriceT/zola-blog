@@ -57,4 +57,3 @@ On ne profitera pour copier également le certificat de l'autorité racine sur l
 Il faut convertir le certificat pour qu'il puisse être intégré à Windows
 
     openssl pkcs12 -inkey lt-18hp07-pjt-key.pem -in lt-18hp07-pjt.pem -export -out lt-18hp07-pjt.pfx
-

@@ -4,7 +4,7 @@ all: build deploy
 PHONY: build deploy
 
 
-build: 
+build:
 	zola build
 
 deploy:

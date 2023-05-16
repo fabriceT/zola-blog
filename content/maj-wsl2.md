@@ -38,7 +38,7 @@ On va suivre la démarche de la [doc officielle de MS](https://docs.microsoft.co
 
 Et on redémarre. Notez l'utilisation du drapeau `norestart` dans la ligne de commande. :)
 
-Désormais, nous allons pouvoir [mettre à jour le kernel Linux sous Windows](https://aka.ms/wsl2kernel). 
+Désormais, nous allons pouvoir [mettre à jour le kernel Linux sous Windows](https://aka.ms/wsl2kernel).
 
 ![Mise à jour kernel Linux sous Windows](data/medias/maj-kernel-swl2.png)
 

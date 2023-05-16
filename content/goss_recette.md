@@ -25,4 +25,3 @@ On peut automatiquement générer les spécifications à partir de l'existant
     goss autoadd sshd
 
 Ce qui va générer les contraintes pour le service, l'adresse d'écoute, l'utilisateur et groupe, le process en cours…
-

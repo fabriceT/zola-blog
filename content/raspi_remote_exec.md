@@ -20,7 +20,7 @@ Les besoins sont :
 
 1. récupérer un fichier à un endroit précis
 2. Ne pas exécuter le script s'il a déjà été exécuté (filtre par horodatage ou par empreinte)
-3. avoir un moyen de vérifier que le script n'a pas été écrit par un malotru. 
+3. avoir un moyen de vérifier que le script n'a pas été écrit par un malotru.
 
 Pour le premier besoin, rien de plus simple : Il y a toujours `wget` ou `curl` qui traîne.
 
@@ -88,7 +88,7 @@ Public key: age18gk6f4k02quuk3jnejfc54a526zkf5mjv8mh20y2eyyax9m3ufjqjku5ew
 
 Écrivons les instructions à exécuter, puis chiffrons-les en utilisant la clef publique `age18gk6f4k02quuk3jnejfc54a526zkf5mjv8mh20y2eyyax9m3ufjqjku5ew`.
 
-```bash 
+```bash
 $ age -r age18gk6f4k02quuk3jnejfc54a526zkf5mjv8mh20y2eyyax9m3ufjqjku5ew -a script.sh > encoded-script
 $ cat encoded-script
 -----BEGIN AGE ENCRYPTED FILE-----

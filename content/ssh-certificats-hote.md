@@ -30,7 +30,7 @@ des certificats des serveurs.
 ssh-keygen -a 256 -f ssh_server_ca -t ecdsa -C "CA Server"
 ```
 
-Ce trousseau de clefs doit être correctement protégé : On veut signer nos clefs 
+Ce trousseau de clefs doit être correctement protégé : On veut signer nos clefs
 pas que des autres signent les leurs et les intègrent dans notre infra.
 
 ## Création du certificat SSH
@@ -113,7 +113,7 @@ ssh-keygen -lf server_ca.pub
 	Key ID: "CA_SERVER"
 	Serial: 0
 	Valid: from 2023-04-03T14:31:00 to 2023-06-26T14:32:51
-	Principals: 
+	Principals:
 		arsinoe.home
 	Critical Options: (none)
 	Extensions: (none)
@@ -122,7 +122,7 @@ ssh-keygen -lf server_ca.pub
 ## Regardons une connexion SSH
 
 On va réaliser une connexion SSH en mode verbeux sur un autre hôte configuré pour
-utiliser un certificat SSH, ici `alarmpi.home` : 
+utiliser un certificat SSH, ici `alarmpi.home` :
 
 ```bash
 $ ssh -vvv alarmpi.home
@@ -162,7 +162,7 @@ ssh-ed25519-cert-v01@openssh.com AAAAIHNzaC1lZDI1NTE5L[…]6Ec5qRxW9oM1
 # alarmpi.home:22 SSH-2.0-OpenSSH_9.3
 ```
 
-ou en chaînant les instructions 
+ou en chaînant les instructions
 
 ```bash
 ssh-keyscan -c alarmpi.home | ssh-keygen -Lf -
@@ -178,7 +178,7 @@ ssh-keyscan -c alarmpi.home | ssh-keygen -Lf -
         Key ID: "ALARMPI"
         Serial: 0
         Valid: from 2023-04-03T16:02:00 to 2023-06-26T16:03:36
-        Principals: 
+        Principals:
                 alarmpi.home
         Critical Options: (none)
         Extensions: (none)
