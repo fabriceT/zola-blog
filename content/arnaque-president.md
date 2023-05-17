@@ -35,7 +35,7 @@ Le problème de validation de l'identité d'une personne et, par extension, l'id
 
 La première solution, la plus rudimentaire et la plus fiable est l'authentification de proximité : la personne est physiquement en face de nous et on compare avec les informations dont on dispose sur elle. Le seul moyen de contourner cette validation était de trouver un sosie convenable, suffisamment bon acteur et imitateur pour interpréter correctement l'individu à personnifier. Le contournement de ce type d’authentification peut s'avérer être difficile selon la proximité des intervenants.
 
-Le principal problème de ce type d’authentification est qu’on ne peut pas toujours avoir la personne en face de soi. On utilisait à alors des mesures destinées à identifier la source : signature, adresse, écriture… Puis la technologie est venue pour s'interfacer dans ce type d'échanges, apportant des différences majeures tout en donnant l'impression que rien avait changé.
+Le principal problème de ce type d’authentification est qu’on ne peut pas toujours avoir la personne en face de soi. On utilisait alors des mesures destinées à identifier la source : signature, adresse, écriture… Puis la technologie est venue pour s'interfacer dans ce type d'échanges, apportant des différences majeures tout en donnant l'impression que rien avait changé.
 
 L'arnaque de type faux « le Drian » reposait sur le fait que le contact visuel et audio était réalisé à distance avec une connexion de mauvaise qualité afin qu'Alice se persuade que pixel Bob était le fruit de la qualité de la transmission. Cliff utilisait cette ruse pour atténuer les défauts de son postiche. Il fallait également qu’Alice ne puisse pas remettre en question la situation. Pour cela, Cliff était rusé et avait du bagou.
 
