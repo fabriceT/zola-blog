@@ -1,3 +1,8 @@
+ifneq (,$(wildcard ./.env))
+    include .env
+    export
+endif
+
 all: build deploy
 
 
@@ -8,6 +13,6 @@ build:
 	zola build
 
 deploy:
-	rsync -av --delete-after public/ www.kill-swit.ch:/home/thfa9713/public_html \
+	rsync -rv --delete-after public/ $(ROOT) \
 	  --exclude ".well-known" \
 	  --exclude ".htaccess"
