@@ -1,6 +1,6 @@
 ---
 title: Débloquer automatiquement le vault d'ansible
-date: 2024-10-08
+date: 2023-10-08
 
 taxonomies:
   tags:
@@ -10,32 +10,32 @@ taxonomies:
 
 ---
 
-Je ne suis pas fan du vault d'ansible, ni des mots de passe. C'est donc avec une
-grand intérêt que j'ai découvert que le configuration d'Ansible permettait
-d'exécuter un script à la place d'un fichier contenant le mot de passe du vault.
-
-Si le fichier `ansible.cfg` est situé dans `/etc/ansible`, alors script devra se
-trouver dans le même répertoire.
+Je ne suis pas spécialement fan d'Ansible Vault, ni des mots de passe qu'on doit saisir, c'est donc avec un grand intérêt que j'ai découvert que la configuration d'Ansible permettait d'exécuter un script à la place d'un fichier contenant le mot de passe du coffre. Ansible se charge de capturer la sortie du script et de la traiter comme si on avait fait un `cat <vault_password.txt>`.
 
 ```ini
-vault_password_file=vault-sops.sh
+vault_password_file=vault-unlock.sh
 ```
+Dans l'exemple ci-dessus, le script appelé doit être situé dans le répertoire dans lequel se situe le fichier `ansible.cfg`.
 
-Vu qu'il n'est pas possible d'exécuter une commande, le script sera principalement
-une simple enveloppe de la commande qui permettra de récupérer le mot de passe
-puisque Ansible va directement récupérer la sortie du script.
+Étant donné qu'il n'est pas possible d'exécuter directement une commande, le script sera principalement une enveloppe autour de la commande permettant d'afficher le mot de passe.
 
-## Sops
+## Exemples de scripts
 
-```shell
-#!/bin/bash
+### Sops
+
+SOPS est une sorte de GPG allégé, il permet de chiffrer en utilisant des clefs privées.
+
+```bash
+#!/bin/env bash
 
 sops -d /etc/ansible/ansible-vault-password.txt
 ```
 
 ### libsecret
 
-```shell
+Libsecret est le système de stockage de secrets de Gnome.
+
+```bash
 #!/bin/env bash
 
 secret-tool lookup application ansible
